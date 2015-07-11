@@ -2,7 +2,7 @@
 my work on algorithm
 
 那些年做过的算法题
-## 按来源分类
+## 按题目来源分类
 * book1-算法竞赛入门经典
 * book2-算法导论
 * hsoj-[湖北师范学院oj](http://www.cs.hbnu.edu.cn/hsoj)
