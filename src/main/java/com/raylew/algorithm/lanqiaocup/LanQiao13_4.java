@@ -1,93 +1,60 @@
 package com.raylew.algorithm.lanqiaocup;
 
 /*
-标题：带分数
-    100 可以表示为带分数的形式：100 = 3 + 69258 / 714
-    还可以表示为：100 = 82 + 3546 / 197
-    注意特征：带分数中，数字1~9分别出现且只出现一次（不包含0）。
-    类似这样的带分数，100 有 11 种表示法。
-题目要求：
-从标准输入读入一个正整数N (N<1000*1000)
-程序输出该数字用数码1~9不重复不遗漏地组成带分数表示的全部种数。
-注意：不要求输出每个表示，只统计有多少表示法！
-例如：
-用户输入：
-100
-程序输出：
-11
-再例如：
-用户输入：
-105
-程序输出：
-6
+标题: 黄金连分数
+黄金分割数0.61803... 是个无理数，这个常数十分重要，在许多工程问题中会出现。有时需要把这个数字求得很精确。
+对于某些精密工程，常数的精度很重要。也许你听说过哈勃太空望远镜，它首次升空后就发现了一处人工加工错误，
+对那样一个庞然大物，其实只是镜面加工时有比头发丝还细许多倍的一处错误而已，却使它成了“近视眼”!!
+言归正传，我们如何求得黄金分割数的尽可能精确的值呢？有许多方法。
+比较简单的一种是用连分数：
+
+                  1
+    黄金数 = ---------------------
+                        1
+             1 + -----------------
+                          1
+                 1 + -------------
+                            1
+                     1 + ---------
+                          1 + ...
+
+这个连分数计算的“层数”越多，它的值越接近黄金分割数。
+请你利用这一特性，求出黄金分割数的足够精确值，要求四舍五入到小数点后100位。
+小数点后3位的值为：0.618
+小数点后4位的值为：0.6180
+小数点后5位的值为：0.61803
+小数点后7位的值为：0.6180340
+（注意尾部的0，不能忽略）
+你的任务是：写出精确到小数点后100位精度的黄金分割值。
+注意：尾数的四舍五入！ 尾数是0也要保留！
+ */
+
+/*
+算法要点：用斐波那契数列模拟
  */
 public class LanQiao13_4 {
-    static int num_times[] = new int[10];
-
     public static void main(String[] args) {
-        int n = 95000;
-        int total = 0;
-        int num_i[] = new int[10];
-        for (int i = 1; i <= n - 1; i++) {
-            for (int t = 0; t < 10; t++) {
-                num_times[t] = 0;
-            }
-            if (dup(i)) {
-                continue;
-            }
-            int len_k = (9 - (i + "").length()) / 2;
-            int max_k = 1;
-            for (int t = 1; t <= len_k; t++) {
-                max_k = max_k * 10;
-            }
-            for (int t = 0; t < 10; t++)
-                // ��ʱ����i���õ������ָ���
-                num_i[t] = num_times[t];
-            for (int k = 1; k < max_k; k++) {
-                for (int t = 0; t < 10; t++)
-                    // �ָ�i���õ������ָ���
-                    num_times[t] = num_i[t];
-                if (dup(k)) {
-                    continue;
-                }
-                int j = (n - i) * k;
-                if (j < k) {
-                    continue;
-                }
-                if (dup(j)) {
-                    continue;
-                }
-                if (checkAll()) {
-                    total++;
-                    System.out.println(n + "=" + i + "+" + j + "/" + k);
-                }
+        for (int i = 1; ; i++) {
+            double res = (double) lks(i) / lks(i + 1);
+            System.out.println(res);
+            if ((res + "").startsWith("0.618034")) {
+                break;
             }
         }
-        System.out.println(total);
     }
 
-    // �ж�ÿ�����Ƿ�����ظ�������
-    public static boolean dup(int num) {
-        while (num > 0) {
-            int t = num % 10;
-            num_times[t]++;
-            if (num_times[t] > 1) {
-                return true;
-            }
-            num = num / 10;
-        }
-        if (num_times[0] > 0) {
-            return true;
-        }
-        return false;
-    }
-
-    public static boolean checkAll() {
-        for (int t = 1; t < 10; t++) {
-            if (num_times[t] == 0) {
-                return false;
-            }
-        }
-        return true;
+    /**
+     * 生成斐波那契数
+     *
+     * @param n 第n为斐波那契数
+     * @return
+     */
+    public static int lks(int n) {
+        if (n == 1) {
+            return 1;
+        } else if (n == 2) {
+            return 3;
+        } else
+            return lks(n - 2) + lks(n - 1);
     }
 }

@@ -2,17 +2,17 @@
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$/src/main/java/com/raylew/algorithm/lanqiaocup/LanQiao12_1.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/raylew/algorithm/lanqiaocup/LanQiao12_2.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/raylew/algorithm/lanqiaocup/LanQiao12_3.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/raylew/algorithm/lanqiaocup/LanQiao12_4.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/raylew/algorithm/lanqiaocup/LanQiao12_5.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/raylew/algorithm/lanqiaocup/LanQiao13_1.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/raylew/algorithm/lanqiaocup/LanQiao13_2.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/raylew/algorithm/lanqiaocup/LanQiao13_3.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/raylew/algorithm/lanqiaocup/LanQiao13_4.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/raylew/algorithm/lanqiaocup/LanQiao13_5.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/raylew/algorithm/lanqiaocup/LanQiao13_6.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/raylew/algorithm/lanqiaocup/LanQiao13_7.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/raylew/algorithm/lanqiaocup/LanQiao13_9.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/raylew/algorithm/other/Calculate110.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/raylew/algorithm/other/LuckyNumber.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/raylew/algorithm/other/LuckyNumber2.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/raylew/algorithm/other/MaxK.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/raylew/algorithm/other/世纪末的星期.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/raylew/algorithm/other/振兴中华.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/raylew/algorithm/poj/POJ1753.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/raylew/algorithm/poj/POJ2965.java" charset="UTF-8" />
   </component>
