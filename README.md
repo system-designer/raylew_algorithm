@@ -8,7 +8,7 @@ my work on algorithm
 * hsoj-[湖北师范学院oj](http://www.cs.hbnu.edu.cn/hsoj)
 * lanqiaocup-[工信部蓝桥杯算法大赛预赛真题](http://www.lanqiao.org)
 * ntoj-[南通中学信息奥林匹克竞赛在线评测系统](http://www.ntnoi.cn:8080/acmhome/welcome.do?method=index)
-* os-[操作系统设计有关的算法]
+* os-操作系统设计有关的算法
 * other-一些来路不明的算法题
 * poj-[北京大学oj](http://poj.org)
 
