@@ -29,7 +29,7 @@ my work on algorithm
 
 二.图算法
 * 深度优先遍历
-  * [39级台阶](https://github.com/aishangzoulu/raylew_algorithm/blob/master/src/main/java/com/raylew/algorithm/lanqiaocup/LanQiao13_8.java)
+  * [39级台阶](https://github.com/aishangzoulu/raylew_algorithm/blob/master/src/main/java/com/raylew/algorithm/lanqiaocup/LanQiao13_3.java)
   * [八皇后问题](https://github.com/aishangzoulu/raylew_algorithm/blob/master/src/main/java/com/raylew/algorithm/book1/%E5%85%AB%E6%95%B0%E7%A0%81%E9%97%AE%E9%A2%98.java)
   * [还原ip地址](https://github.com/aishangzoulu/raylew_algorithm/blob/master/src/main/java/com/raylew/algorithm/book1/%E8%BF%98%E5%8E%9FIP%E5%9C%B0%E5%9D%80.java)
   * [困难的串](https://github.com/aishangzoulu/raylew_algorithm/blob/master/src/main/java/com/raylew/algorithm/book1/%E5%9B%B0%E9%9A%BE%E7%9A%84%E4%B8%B2.java)
