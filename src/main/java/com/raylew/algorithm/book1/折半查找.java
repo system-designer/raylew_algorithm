@@ -4,9 +4,10 @@ public class 折半查找 {
     public static void main(String[] args) {
         int[] arr = {1, 6, 3, 7, 9, 8, 4, 0, 5, 2};
         insert(arr);
-        System.out.println(search(15, arr));
+        System.out.println(search(9, arr));
     }
 
+    //插入排序
     public static void insert(int[] arr) {
         if (arr != null) {
             for (int i = 1; i < arr.length; i++) {

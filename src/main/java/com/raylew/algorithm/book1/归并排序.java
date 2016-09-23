@@ -11,7 +11,7 @@ public class 归并排序 {
 
     public static void merge(int[] arr, int low, int high) {
         if (low < high) {
-            int mid = low + (high - low) / 2;
+            int mid = (low + high) / 2;
             merge(arr, low, mid);
             merge(arr, mid + 1, high);
             mergeSort(arr, low, mid, high);

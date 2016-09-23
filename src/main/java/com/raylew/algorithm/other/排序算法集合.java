@@ -188,16 +188,16 @@ public class 排序算法集合 {
 	/**
 	 * 归并排序
 	 */
-	public static int[] mergesort(int[] a, int s, int t, int[] b) {
+	public static int[] mergeSort(int[] a, int s, int t, int[] b) {
 		int m;
 		int[] temp = new int[t + 1];
 		if (s == t) {
 			b[s] = a[s];
 		} else {
 			m = (s + t) / 2;
-			mergesort(a, s, m, temp);// 左半部分递归调用
-			mergesort(a, m + 1, t, temp);// 右半部分递归调用
-			merg(temp, s, m, t, b);// 由temp去归并，返回的值放到b中,b赋新值，其实就是更新temp,然后让temp再去归并，返回新的b
+			mergeSort(a, s, m, temp);// 左半部分递归调用
+			mergeSort(a, m + 1, t, temp);// 右半部分递归调用
+			merge(temp, s, m, t, b);// 由temp去归并，返回的值放到b中,b赋新值，其实就是更新temp,然后让temp再去归并，返回新的b
 		}
 		return a;
 	}
@@ -216,7 +216,7 @@ public class 排序算法集合 {
 	 * @param b
 	 *            新表
 	 */
-	private static void merg(int[] a, int l, int m, int n, int[] b) {
+	private static void merge(int[] a, int l, int m, int n, int[] b) {
 		int i, j, k;
 		i = l;
 		j = m + 1;
