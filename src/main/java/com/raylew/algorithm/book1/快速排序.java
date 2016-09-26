@@ -6,10 +6,11 @@ package com.raylew.algorithm.book1;
 public class 快速排序 {
 
     public static void main(String[] args) {
-        int[] arr = {1, 3, 2, 8, 5, 7, 4, 6, 9, 0};
+//        int[] arr = {1, 3, 2, 8, 5, 7, 4, 6, 9, 0};
+        int[] arr = {5, 3, 1, 9, 8, 2, 4, 7};
         quick(arr, 0, arr.length - 1);
         for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i]);
+            System.out.print(arr[i]+" ");
         }
     }
 

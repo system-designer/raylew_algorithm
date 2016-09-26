@@ -29,7 +29,7 @@ public class 折半查找 {
         int left = 0, right = arr.length - 1;
         int mid = 0;
         while (left <= right) {
-            mid = left + (right - left) / 2;
+            mid = (left + right) / 2;
             if (num > arr[mid]) {
                 left = mid + 1;
             } else if (num < arr[mid]) {
