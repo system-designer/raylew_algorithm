@@ -7,34 +7,52 @@ package com.raylew.algorithm.book1;
  */
 public class 棋盘覆盖 {
     static int MAX_SIZE = 16;
+    //棋盘
     static int board[][] = new int[MAX_SIZE][MAX_SIZE];
-    static int tile = 0;
+    //骨牌号
+    static int tile = 1;
 
+    /**
+     * 棋盘覆盖
+     * @param tr 棋盘左上角行
+     * @param tc 棋盘左上角列
+     * @param dr 特殊方格的行
+     * @param dc 特殊方格的列
+     * @param size 每一行的格数
+     */
     public void chessboard(int tr, int tc, int dr, int dc, int size) {
         if (size == 1)
             return;
         int t = tile++, s = size / 2;
         if (dr < tr + s && dc < tc + s)
+            //特殊方格在左上角子棋盘
             chessboard(tr, tc, dr, dc, s);
         else {
+            //不在此棋盘，将此棋盘左上角设为相应的骨牌号
             board[tr + s - 1][tc + s - 1] = t;
             chessboard(tr, tc, tr + s - 1, tc + s - 1, s);
         }
         if (dr < tr + s && dc >= tc + s)
+            //特殊方格在右上角子棋盘
             chessboard(tr, tc + s, dr, dc, s);
         else {
+            //不在此棋盘，将此棋盘右上角设为相应的骨牌号
             board[tr + s - 1][tc + s] = t;
             chessboard(tr, tc + s, tr + s - 1, tc + s, s);
         }
         if (dr >= tr + s && dc < tc + s)
+            //特殊方格在左下角子棋盘
             chessboard(tr + s, tc, dr, dc, s);
         else {
+            //不在此棋盘，将此棋盘左下角设为相应的骨牌号
             board[tr + s][tc + s - 1] = t;
             chessboard(tr + s, tc, tr + s, tc + s - 1, s);
         }
         if (dr >= tr + s && dc >= tc + s)
+            //特殊方格在右下角子棋盘
             chessboard(tr + s, tc + s, dr, dc, s);
         else {
+            //不在此棋盘，将此棋盘右下角设为相应的骨牌号
             board[tr + s][tc + s] = t;
             chessboard(tr + s, tc + s, tr + s, tc + s, s);
         }

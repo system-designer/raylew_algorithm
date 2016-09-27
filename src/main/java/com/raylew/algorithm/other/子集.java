@@ -3,13 +3,15 @@ package com.raylew.algorithm.other;
 /**
  * 求一个集合的幂集,递归求解
  */
-public class 子集2 {
+public class 子集 {
 
     public static void main(String[] args) {
         int A[] = new int[4];
         print_subset1(A.length, A, 0);
         System.out.println("===========分割线============");
         print_subset2(A.length, A, 0);
+        System.out.println("===========分割线============");
+        print_subset3(A.length);
     }
 
     /**
@@ -57,5 +59,31 @@ public class 子集2 {
             B[cur] = 0;
             print_subset2(n, B, cur + 1);
         }
+    }
+
+    /**
+     * 二进制法
+     * @param n
+     */
+    public static void print_subset3(int n){
+        int setCount=(int)Math.pow(2,n);
+        for(int i=0;i<setCount;i++){
+            String pattern=Integer.toBinaryString(i);
+            if(pattern.length()<n){
+                StringBuilder appendStr=new StringBuilder();
+                for(int j=0;j<n-pattern.length();j++){
+                    appendStr.append("0");
+                }
+                appendStr.append(pattern);
+                pattern=appendStr.toString();
+            }
+            for (int j = 0; j < n; j++) {
+                if (pattern.charAt(j) == '1') {
+                    System.out.print(j + " ");
+                }
+            }
+            System.out.println();
+        }
+
     }
 }
