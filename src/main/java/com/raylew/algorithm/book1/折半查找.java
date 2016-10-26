@@ -38,6 +38,6 @@ public class 折半查找 {
                 return mid;
             }
         }
-        return -(left + 1);
+        return -1;
     }
 }
