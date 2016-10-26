@@ -11,7 +11,7 @@ import java.util.Scanner;
  *剩下的人继续从1开始报数，直到所有的人都出圈为止。
  *对于给定的m和n，求出所有人的出圈顺序.
  */
-public class JosephProblem{
+public class JosephusProblem {
     public static void main(String[] args){
         System.out.println("程序说明如下：");
         System.out.println("由m个人围成一个首尾相连的圈报数。从第一个人开始，从1开始报数，报到n的人出圈，剩下的人继续从1开始报数，直到所有的人都出圈为止。对于给定的m和n，求出所有人的出圈顺序.");
@@ -31,7 +31,7 @@ public class JosephProblem{
         //给数组赋值
         for(int i=0;i<a.length;i++)
             a[i]=i+1;
-        //i为元素下表，j代表当前要报的数
+        //i为元素下标，j代表当前要报的数
         int i=0;
         int j=1;
         while(len>0){
