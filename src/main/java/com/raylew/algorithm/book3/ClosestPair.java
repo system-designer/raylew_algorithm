@@ -1,5 +1,7 @@
 package com.raylew.algorithm.book3;
 
+import com.raylew.algorithm.book3.model.Point;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -95,37 +97,6 @@ public class ClosestPair {
     public static double dis(int i, int j) {
         return Math.sqrt((points[i].getX() - points[j].getX()) * (points[i].getX() - points[j].getX())
                 + (points[i].getY() - points[j].getY()) * (points[i].getY() - points[j].getY()));
-    }
-}
-
-class Point implements Comparable {
-    private double x;
-    private double y;
-
-    @Override
-    public int compareTo(Object obj) {
-        Point point = (Point) obj;
-        if (this.x > point.getX()) {
-            return 1;
-        } else {
-            return 0;
-        }
-    }
-
-    public double getX() {
-        return x;
-    }
-
-    public void setX(double x) {
-        this.x = x;
-    }
-
-    public double getY() {
-        return y;
-    }
-
-    public void setY(double y) {
-        this.y = y;
     }
 }
 
