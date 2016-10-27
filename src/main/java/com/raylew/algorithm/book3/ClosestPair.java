@@ -23,26 +23,46 @@ public class ClosestPair {
             point.setY(scanner.nextDouble());
             points[i] = point;
         }
+        double minDistance1=getClosestPair1();
+        System.out.println(minDistance1);
         Arrays.sort(points);
-        double minDistance = getClosestPair(0, points.length - 1);
-        System.out.println(minDistance);
+        double minDistance2 = getClosestPair2(0, points.length - 1);
+        System.out.println(minDistance2);
     }
 
     /**
-     * 最近对
-     *
-     * @param left
-     * @param right
+     * 蛮力法解最近对问题
      * @return
      */
-    public static double getClosestPair(int left, int right) {
+    public static double getClosestPair1(){
+        double minDistance=Double.MAX_VALUE;
+        //计算区间内部点的距离
+        int n=points.length;
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                double d = dis(i, j);
+                if (d < minDistance)
+                    minDistance = d;
+            }
+        }
+        return minDistance;
+    }
+
+    /**
+     * 分治法解最近对问题
+     *
+     * @param left 区间左边点下标
+     * @param right 区间右边点下标
+     * @return
+     */
+    public static double getClosestPair2(int left, int right) {
         if (left == right)
             return Double.MAX_VALUE;
         if (left + 1 == right)
             return dis(left, right);
         int mid = (left + right) / 2;
-        double d1 = getClosestPair(left, mid);
-        double d2 = getClosestPair(mid + 1, right);
+        double d1 = getClosestPair2(left, mid);
+        double d2 = getClosestPair2(mid + 1, right);
         double d = d1 < d2 ? d1 : d2;
         int i, j, k = 0;
         //存放需要计算距离的点的下标
