@@ -68,7 +68,7 @@ public class BadChocolate {
     public static void dfs(int rowStart, int rowEnd, int colStart, int colEnd) {
         print(rowStart, rowEnd, colStart, colEnd);
         if (rowStart == rowEnd && colStart == colEnd) {
-            System.out.println((path + 1) + " ");
+            System.out.println(path + " ");
             count++;
             return;
         } else {
