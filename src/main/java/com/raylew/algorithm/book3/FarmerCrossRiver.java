@@ -21,6 +21,11 @@ public class FarmerCrossRiver {
         across(status, 0);
     }
 
+    /**
+     * dfs实现过河
+     * @param status
+     * @param direction
+     */
     public static void across(int[] status, int direction) {
         if (isSucceed(status)) {
             //System.out.println("ok");
@@ -114,8 +119,9 @@ public class FarmerCrossRiver {
     }
 
     /**
-     * @param status
-     * @param direction
+     * 某边是否空
+     * @param status 状态
+     * @param direction 边的方向
      * @return
      */
     public static boolean isSideEmpty(int[] status, int direction) {
@@ -132,7 +138,7 @@ public class FarmerCrossRiver {
     /**
      * 失败
      *
-     * @param status
+     * @param status 状态
      * @return
      */
     public static boolean isDangerous(int[] status) {
@@ -145,6 +151,11 @@ public class FarmerCrossRiver {
         return false;
     }
 
+    /**
+     * 状态编码
+     * @param status
+     * @return
+     */
     public static int status2Code(int[] status) {
         int res = 0;
         for (int i = 0; i < status.length; i++) {
@@ -159,21 +170,30 @@ public class FarmerCrossRiver {
         return res;
     }
 
-    public static int[] code2Status(int num) {
+    /**
+     * 解码到状态
+     * @param code
+     * @return
+     */
+    public static int[] code2Status(int code) {
         int[] res = new int[4];
         int index = 3;
-        while (num > 0) {
-            if (num % 2 == 0) {
+        while (code > 0) {
+            if (code % 2 == 0) {
                 res[index] = 0;
             } else {
                 res[index] = 1;
             }
-            num = num / 2;
+            code = code / 2;
             index--;
         }
         return res;
     }
 
+    /**
+     * 打印路径
+     * @param path
+     */
     public static void printStatus(List<Integer> path) {
         Iterator<Integer> iterator = path.iterator();
         while (iterator.hasNext()) {
