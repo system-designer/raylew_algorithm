@@ -7,6 +7,7 @@ package com.raylew.algorithm.book3;
 
 /**
  * Created by Raymond on 2016/11/2.
+ * <warning>未完成</warning>
  * 农夫P、狼w、羊c和菜g过河
  */
 public class FarmerCrossRiver2 {

@@ -41,6 +41,7 @@ public class FarmerCrossRiver {
                         visited[statusCode] = true;
                         path.add(statusCode);
                         across(status, 1 - direction);
+                        visited[statusCode] = false;
                         path.remove((Integer) statusCode);
                     }
                     status[0] = 0;
@@ -54,6 +55,7 @@ public class FarmerCrossRiver {
                             visited[statusCode] = true;
                             path.add(statusCode);
                             across(status, 1 - direction);
+                            visited[statusCode] = false;
                             path.remove((Integer) statusCode);
                         }
                         status[j] = 0;
@@ -70,6 +72,7 @@ public class FarmerCrossRiver {
                         visited[statusCode] = true;
                         path.add(statusCode);
                         across(status, 1 - direction);
+                        visited[statusCode] = false;
                         path.remove((Integer) statusCode);
                     }
                     status[0] = 1;
@@ -83,6 +86,7 @@ public class FarmerCrossRiver {
                             visited[statusCode] = true;
                             path.add(statusCode);
                             across(status, 1 - direction);
+                            visited[statusCode] = false;
                             path.remove((Integer) statusCode);
                         }
                         status[j] = 1;
