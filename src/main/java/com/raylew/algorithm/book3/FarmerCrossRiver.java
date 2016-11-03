@@ -38,24 +38,23 @@ public class FarmerCrossRiver {
         } else {
             if (direction == 0) {
                 //aSide->bSide
-                if (!isSideEmpty(status, 1)) {
-                    //bSide有东西
-                    status[0] = 1;
-                    int statusCode = status2Code(status);
-                    if (!visited[statusCode]) {
-                        visited[statusCode] = true;
-                        path.add(statusCode);
-                        across(status, 1 - direction);
-                        visited[statusCode] = false;
-                        path.remove((Integer) statusCode);
-                    }
-                    status[0] = 0;
+                //农夫单独过河
+                status[0] = 1;
+                int statusCode = status2Code(status);
+                if (!visited[statusCode]) {
+                    visited[statusCode] = true;
+                    path.add(statusCode);
+                    across(status, 1 - direction);
+                    visited[statusCode] = false;
+                    path.remove((Integer) statusCode);
                 }
+                status[0] = 0;
+                //农夫携带某一物品过河
                 for (int j = 1; j < status.length; j++) {
                     status[0] = 1;
                     if (status[j] == 0) {
                         status[j] = 1;
-                        int statusCode = status2Code(status);
+                        statusCode = status2Code(status);
                         if (!visited[statusCode]) {
                             visited[statusCode] = true;
                             path.add(statusCode);
@@ -69,24 +68,23 @@ public class FarmerCrossRiver {
                 }
             } else {
                 //bSide->aSide
-                if (!isSideEmpty(status, 0)) {
-                    //bSide有东西
-                    status[0] = 0;
-                    int statusCode = status2Code(status);
-                    if (!visited[statusCode]) {
-                        visited[statusCode] = true;
-                        path.add(statusCode);
-                        across(status, 1 - direction);
-                        visited[statusCode] = false;
-                        path.remove((Integer) statusCode);
-                    }
-                    status[0] = 1;
+                //农夫单独过河
+                status[0] = 0;
+                int statusCode = status2Code(status);
+                if (!visited[statusCode]) {
+                    visited[statusCode] = true;
+                    path.add(statusCode);
+                    across(status, 1 - direction);
+                    visited[statusCode] = false;
+                    path.remove((Integer) statusCode);
                 }
+                status[0] = 1;
+                //农夫携带某一物品过河
                 for (int j = 1; j < status.length; j++) {
                     status[0] = 0;
                     if (status[j] == 1) {
                         status[j] = 0;
-                        int statusCode = status2Code(status);
+                        statusCode = status2Code(status);
                         if (!visited[statusCode]) {
                             visited[statusCode] = true;
                             path.add(statusCode);
@@ -116,23 +114,6 @@ public class FarmerCrossRiver {
             }
         }
         return index == status.length;
-    }
-
-    /**
-     * 某边是否空
-     * @param status 状态
-     * @param direction 边的方向
-     * @return
-     */
-    public static boolean isSideEmpty(int[] status, int direction) {
-        boolean empty = true;
-        for (int i = 0; i < status.length; i++) {
-            if (status[i] == direction) {
-                empty = false;
-                break;
-            }
-        }
-        return empty;
     }
 
     /**
