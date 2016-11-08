@@ -5,8 +5,8 @@ package com.raylew.algorithm.book3;
  */
 public class Horspool {
     public static void main(String[] args) {
-        String text = "JIM_SAW_ME_IN_A_BARBERSHOP";
-        String pattern = "BARBER";
+        String text = "QWPMTYUERADERLN";//"JIM_SAW_ME_IN_A_BARBERSHOP";
+        String pattern = "ERADER";//"BARBER";
         Horspool horspool = new Horspool();
         int matchIndex = horspool.horspool(pattern, text);
         System.out.println(matchIndex);
@@ -19,7 +19,7 @@ public class Horspool {
      * @return
      */
     int[] createBadCharacterTable(char[] patternChars) {
-        //let all be pattern.length
+        //所有元素为模式串长度
         int[] badShiftTable = new int[256];
         for (int i = 0; i < 256; i++) {
             badShiftTable[i] = patternChars.length;

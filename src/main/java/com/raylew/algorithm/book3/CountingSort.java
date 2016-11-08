@@ -61,8 +61,10 @@ public class CountingSort {
         }
         int k=max+1;
         int c[] = new int[k];
+        //计算频率值
         for (int i = 0; i < a.length; i++)
             c[a[i]]++;
+        //重用于分布
         for (int i = 1; i < k; i++)
             c[i] += c[i-1];
         int b[] = new int[a.length];
