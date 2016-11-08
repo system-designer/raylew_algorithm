@@ -18,7 +18,7 @@ public class Horspool {
      * @param patternChars 模式串
      * @return
      */
-    int[] createBadCharacterTable(char[] patternChars) {
+    private int[] createBadCharacterTable(char[] patternChars) {
         //所有元素为模式串长度
         int[] badShiftTable = new int[256];
         for (int i = 0; i < 256; i++) {
@@ -38,7 +38,7 @@ public class Horspool {
      * @param text
      * @return
      */
-    int horspool(String pattern, String text) {
+    private int horspool(String pattern, String text) {
         char[] patternChars = pattern.toCharArray();
         char[] textChars = text.toCharArray();
         if (patternChars.length > textChars.length) {

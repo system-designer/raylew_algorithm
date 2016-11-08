@@ -9,6 +9,7 @@ import java.util.*;
 public class FarmerCrossRiver {
     //深搜路径
     private static List<Integer> path;
+    //记录路径中已经访问的状态
     private static boolean[] visited;
 
     public static void main(String[] args) {
