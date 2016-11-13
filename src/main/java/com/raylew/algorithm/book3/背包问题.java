@@ -2,6 +2,7 @@ package com.raylew.algorithm.book3;
 
 /**
  * Created by Raymond on 2016/9/27.
+ * 蛮力法解背包问题
  */
 public class 背包问题 {
     //背包能承受的最大重量
