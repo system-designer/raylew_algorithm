@@ -21,7 +21,7 @@ import java.util.LinkedList;
  */
 public class 倒水问题 {
     //测试数据：三个水杯的大小
-    public static int a = 6, b = 3, c = 1;
+    public static int a = 5, b = 2, c = 1;
 
     public static void main(String[] args) {
         //bfs算法初始化
@@ -39,6 +39,7 @@ public class 倒水问题 {
             int tc = ts.getLittle();
             if (ta == 4) {//最终目标为4
                 count++;
+                break;
             }
             //计算当前状态可能产生的所有下一状态，总数等于排列组合中A(3,2)=6
             if (ta > 0 && tb < b) {
