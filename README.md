@@ -59,8 +59,8 @@ my work on algorithm
 * 树(静态建树、动态建树)
 
 四.简单搜索
-* 深度优先搜索[同上深度优先遍历]
-* 广度优先搜索[同上广度优先遍历]
+* [深度优先搜索]https://github.com/aishangzoulu/raylew_algorithm/blob/master/src/main/java/com/raylew/algorithm/book2/DFS.java)
+* [广度优先搜索](https://github.com/aishangzoulu/raylew_algorithm/blob/master/src/main/java/com/raylew/algorithm/book2/BFS.java)
 * 简单搜索技巧和剪枝
 
 五.动态规划
