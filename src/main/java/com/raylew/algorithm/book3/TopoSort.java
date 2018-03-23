@@ -109,7 +109,6 @@ class Vertex2 implements Comparable{
     private Integer d;// 发现时间
     private Integer f;// 完成时间
 
-    @Override
     public int compareTo(Object obj){
         Vertex2 vertex2=(Vertex2)obj;
         return vertex2.getF()-this.f;

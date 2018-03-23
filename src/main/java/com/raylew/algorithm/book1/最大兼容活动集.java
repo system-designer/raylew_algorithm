@@ -60,7 +60,6 @@ class Activity implements Comparable {
         this.end = end;
     }
 
-    @Override
     public int compareTo(Object o) {
         Activity act = (Activity) o;
         return this.end - act.end;

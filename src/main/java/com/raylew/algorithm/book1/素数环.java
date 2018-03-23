@@ -42,18 +42,18 @@ public class 素数环 {
                 System.out.println();
                 total++;
             }
-            return;
-        }
-        for (int i = 1; i <= N; i++) {
-            arr[cur] = i;
-            int j;
-            for (j = 0; j < cur; j++) {
-                if (arr[cur] == arr[j]) {
-                    break;
+        }else{
+            for (int i = 1; i <= N; i++) {
+                arr[cur] = i;
+                int j;
+                for (j = 0; j < cur; j++) {
+                    if (arr[cur] == arr[j]) {
+                        break;
+                    }
                 }
-            }
-            if (j == cur) {
-                dfs(cur + 1);
+                if (j == cur) {
+                    dfs(cur + 1);
+                }
             }
         }
     }

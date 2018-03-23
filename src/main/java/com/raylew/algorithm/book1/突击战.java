@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
+/**
+ * 你有n个部下，每个部下需要完成一项任务。第i个部下需要你花Bi分钟交待任务，然后他会立刻独立地、无间断地执行Ji分钟后完成任务。
+ * 你需要选择交待任务的顺序，使得所有任务尽早执行完毕（即最后一个执行完的任务应尽早结束）。
+ * 注意，不能同时给两个部下交待任务，但部下们可以同时执行他们各自的任务。
+ */
 public class 突击战 {
     static class Data implements Comparable {
         int x, y;

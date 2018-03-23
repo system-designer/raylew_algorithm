@@ -7,6 +7,8 @@
     <groupId>com.raylew.algorithm</groupId>
     <artifactId>com-raylew-algorithm</artifactId>
     <version>1.0.0</version>
+    <packaging>war</packaging>
+
     <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
